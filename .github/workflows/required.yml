@@ -1,0 +1,16 @@
+# Required by an org ruleset on marco-test-org/lockfile-required-target.
+# Also callable as a reusable workflow, as a control.
+name: Required lockfile test
+
+on:
+  pull_request:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  marker:
+    name: Print marker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: marco-test-org/lockfile-test-action@v1.0.0
